@@ -10,9 +10,8 @@ def roulette(array):
     pinindex=0
     sum = 0
     for i in array:
+        sum += i
         if sum >= pin:
             return pinindex
-            break
-        sum += i
-        pinindex += 1
-        
+        else:
+            pinindex += 1
