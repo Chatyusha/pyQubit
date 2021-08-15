@@ -1,3 +1,4 @@
 .env/
 pyQubit/__pycache__/
 pyQubit/math/__pycache__/
+pyQubit/util/__pycache__/
