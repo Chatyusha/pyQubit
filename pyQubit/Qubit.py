@@ -14,4 +14,4 @@ class Qubit ():
         self.coeff = util.fixed_qubit_coefficient(self.bit,i)
 
     def measure(self):
-        return util.measure_qubit(self.coeff)
+        return util.measure_qubit(self.coeff,self.bit)
