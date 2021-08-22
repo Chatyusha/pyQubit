@@ -30,3 +30,14 @@ def measure_qubit(array,bit):
                 sum *= base[j][1]
         ret.append(sum)
     return math.array.roulette(np.array(ret))
+
+def selected_accumulation(flag,coefs,bit):
+    base = pow(np.abs(coefs),2)
+    acc = 1
+    for i in range(bit):
+        if ((flag >> i)&1):
+            acc *= base[i][1]
+        else:
+            acc *= base[i][0]
+
+    return math.complex.fixednorm_randComplex(acc)
