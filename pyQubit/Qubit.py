@@ -17,9 +17,34 @@ class unitQubit():
             self.coef = math.complex.pair_complex(default)
         self.alpha = self.coef[0]
         self.beta = self.coef[1]
+        self.rate = np.abs(self.coef)**2
 
     def init(self, default=np.array([1, 0])):
         self.__init__(default)
+
+    def help(self):
+        man = '''
+        class unitQubit():
+            def __init__(self, default=None):
+                #        if init:
+                #            self.coef = math.complex.pair_complex(\
+                        np.array([1, 0]))
+                #        else:
+                #            self.coef = math.complex.pair_complex()
+
+                # 初期値が指定なし -> ランダム
+                if default is None:
+                    self.coef = math.complex.pair_complex()
+                else:
+                    self.coef = math.complex.pair_complex(default)
+                self.alpha = self.coef[0]
+                self.beta = self.coef[1]
+                self.rate = np.abs(self.coef)**2
+
+            def init(self, default=np.array([1, 0])):
+                self.__init__(default)
+        '''
+        print(man)
 
 
 class Qubit():

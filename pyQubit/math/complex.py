@@ -18,3 +18,13 @@ def pair_complex(default=None):
     rand_angle = np.random.uniform(0.0, 2*np.pi, 2)
 
     return base * (np.cos(rand_angle)+(1j)*np.sin(rand_angle))
+
+
+def complex2wave(c: complex):
+    norm = np.abs(c)
+    a, b = c.real, c.imag
+    cos, sin = norm/a, norm/b
+    if sin >= 0:
+        return np.arccos(cos)
+    elif sin < 0:
+        return -np.arccos(cos)
