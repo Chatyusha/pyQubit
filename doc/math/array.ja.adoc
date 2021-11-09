@@ -4,9 +4,28 @@
 
 === Functions
 
-.関数一覧
+関数一覧
 [options="header"]
 |================
 |関数名|返値|役割
 |rated_ndarray|ndarray|各要素の和が1となる配列を返す
-|roulette     |int    |
+|roulette     |int    |ルーレットの針の指すインデックスを返す
+|================
+
+=== Usage
+[source,python]
+import pyQubit
+
+==== rated_ndarray
+[source, python]
+pyQubit.math.array.rated_ndarray(size=要素数: int) -> numpy.array
+
+配列の要素の和が1、それぞれの要素が0以上1未満の要素数が「size」のndarrayを生成します。
+サイズはint型である必要があります。
+
+==== roulette
+[source, python]
+pyQubit.math.array.roulette(array: numpy.ndarray) -> int
+
+各要素の大きさに応じて重みをつけてランダムで一つ選び、その要素のインデックス番号を返します。
+引数の「array」はndarray型で各要素が0以上、要素の和が1である必要があります。
