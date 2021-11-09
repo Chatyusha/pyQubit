@@ -1,0 +1,12 @@
+= pyQubit 日本語レファレンス
+
+== pyQubit.math.array
+
+=== Functions
+
+.関数一覧
+[options="header"]
+|================
+|関数名|返値|役割
+|rated_ndarray|ndarray|各要素の和が1となる配列を返す
+|roulette     |int    |
