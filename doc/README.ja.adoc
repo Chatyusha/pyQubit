@@ -1,0 +1,6 @@
+= pyQubit 日本語レファレンス
+
+pyQubitとは、Pythonで量子コンピュータをシミュレートするライブラリです。
+
+==  Functions
+

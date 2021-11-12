@@ -1,0 +1,23 @@
+= pyQubit 日本語レファレンス
+
+== pyQubit.math.complex
+
+複素数に関する機能
+
+=== Functions
+
+関数一覧
+[options="header"]
+|================
+|関数名|返値|役割
+|fixednorm_randComplex|complex|絶対値が「norm」の複素数をランダムに生成
+|angle|float|2つの複素数の複素平面における角を求める
+|================
+
+=== Usage
+[source,python]
+import pyQubit
+
+==== fixednorm_randComplex
+[source,python]
+pyQubit.math.complex.fixednorm_randComplex(norm: Union[int, float],bit: int )

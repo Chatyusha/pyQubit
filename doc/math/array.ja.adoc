@@ -2,6 +2,8 @@
 
 == pyQubit.math.array
 
+配列に対しての操作に関する機能
+
 === Functions
 
 関数一覧
