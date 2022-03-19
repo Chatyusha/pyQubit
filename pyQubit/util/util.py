@@ -2,9 +2,10 @@ from .. import math
 import numpy as np
 
 
-def qubit_coefficient(bit) -> np.ndarray:
+def qubit_coefficient(bit):
     # 量子ビットの係数を生成
-    rate = math.array.rated_ndarray(2*bit)
+    coeff_num = 2 ** bit
+    rate = math.array.rated_ndarray(coeff_num)
     return math.complex.fixednorm_randComplex(np.sqrt(rate))
 
 
@@ -21,16 +22,3 @@ def fixed_qubit_coefficient(bit, i):
     return math.complex.fixednorm_randComplex(base)
 
 
-def measure_qubit(array, bit):
-    # 係数の絶対値の2条の配列をroulette関数に
-    base = pow(np.abs(array), 2)
-    ret = []
-    for i in range(2**bit):
-        sum = 1
-        for j in range(bit):
-            if ((i >> j) & 1):
-                sum *= base[j][0]
-            else:
-                sum *= base[j][1]
-        ret.append(sum)
-    return math.array.roulette(np.array(ret))

@@ -3,9 +3,11 @@ import cmath
 from typing import Union
 
 
-def fixednorm_randComplex(norm: Union[int, float], bit: int = 1):
+#   絶対値がnormの複素数の配列
+def fixednorm_randComplex(norm:np.ndarray):
     base = norm + 0j
-    rand = np.random.uniform(0.0, 2*np.pi, bit)
+    gen = np.random.Generator(np.random.MT19937())
+    rand = gen.uniform(0.0, 2*np.pi,norm.size)
     return base * (np.cos(rand)+(1j)*np.sin(rand))
 
 

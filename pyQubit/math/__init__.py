@@ -1,5 +1,5 @@
 from . import (
-    inf,
-    complex,
     array,
+    complex,
+    inf
 )

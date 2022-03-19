@@ -3,8 +3,8 @@ from . import inf
 
 
 def rated_ndarray(size: int) -> np.ndarray:
-    _base = np.random.randint(0, inf.maxint, size)
-    return _base / np.sum(_base)
+    base = np.random.randint(0, inf.maxint, size)
+    return base / np.sum(base)
 
 
 def roulette(array) -> int:
